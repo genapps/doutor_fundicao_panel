@@ -1,0 +1,6 @@
+1: yarn add adminjs @adminjs/express express express-formidable tslib
+2: yarn add nodemon prettier sucrase --dev
+3: yarn add express-session
+4: yarn add @adminjs/sequelize dotenv postgres pg-hstore sequelizeS
+
+npx sequelize-cli model:generate --name User --atributes name:String, email:string, password_hash:string

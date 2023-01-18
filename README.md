@@ -1,5 +1,0 @@
-"# task-manager-dev" 
-"# task-manager-dev" 
-"# task-manager-dev" 
-"# task-manager-dev" 
-"# gerenciador de tarefas-dev."  
