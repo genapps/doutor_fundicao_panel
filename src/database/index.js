@@ -2,9 +2,9 @@ import  Sequelize from "sequelize";
 
 import config from '../config/database';
 
-//import Model from '../modeLs/xxx'
+import User from "../models/user";
 
-const models = [];
+const models = [User];
 
 class Database {
   constructor() {
@@ -14,11 +14,11 @@ class Database {
   }
 
   init() {
-    models.forEach((models) => model.init(this.connection));
+    models.forEach((model) => model.init(this.connection));
   }
 
   associate() {
-    models.forEach((mode) => {
+    models.forEach((model) => {
       if (model.associate) {
         model.associate(this.connection.models);
       }

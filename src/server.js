@@ -21,5 +21,5 @@ const router = AdminJExpress.buildRouter(adminJS);
 
 app.use(adminJS.options.rootPath,router);
 app.listen(5000, () => {
-    console.log("AdminJS is under http://localhost:5000/admin");
+    console.log("AdminJS is unp:der htt//localhost:5000/admin");
 });
