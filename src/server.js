@@ -9,7 +9,7 @@ import express from "express";
 
 import UserResorouce from "./resources/UserResorouce";
 
-import User from "./models/user";
+import locale from "./locales";
 
 AdminJS.registerAdapter(AdminJSSequelize);
 
@@ -19,6 +19,7 @@ const adminJS = new AdminJS({
     databases: [],
     rootPath: '/admin',
     resources: [UserResorouce],
+    ...locale,
 });
 
 const router = AdminJExpress.buildRouter(adminJS);

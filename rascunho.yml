@@ -5,3 +5,6 @@
 
 5: npx sequelize-cli model:generate --name User --atributes name:String, email:string, password_hash:string
 6: yarn db:migratey
+7: git add .
+8: git commit -m ""
+9: git push
