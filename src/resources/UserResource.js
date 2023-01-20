@@ -1,34 +1,33 @@
 import AdminJS from "adminjs";
-
 import User from "../models/user";
-
 export default {
     resource: User,
-    Option: {
+    options: {
         actions: {
             resetPassword: {
-                actionType: "record",
+                actionType: 'record',
                 icon: "Password",
-                handler: async (request, response, context) => {
+                handler: async(request, response, context) => {
                     return {
                         record: context.record.toJSON(),
                     };
                 },
             },
         },
+        parent: {
+            icon: "User",
+        },
         properties: {
             id: {
-              position: 1,
+                position: 1,
             },
             initials: {
-               position: 2,
-               isVisible: { list: true, filter: false, show: true, edit: false},
-    
+                position: 2,
+                isVisible: {list: true, filter: false, show: true, edit: false},
             },
-            name:{
-                position:3,
+            name: {
+                position: 3,
                 isRequired: true,
-    
             },
             email: {
                 position: 4,
@@ -38,38 +37,33 @@ export default {
                 position: 5,
                 isRequired: true,
                 availableValues: [
-                    { value: "admin", label: "Adiministrador" },
-                    { value: "manager", label: "Gerente" },
-                    { value: "developer", label: "Desenvolvedor" },
-
+                    {value: 'admin' , label: 'Administrador'},
+                    {value: 'manager' , label: 'Gerente'},
+                    {value: 'developer' , label: 'Desenvolvedor'}
                 ],
             },
             status: {
                 position: 6,
                 isRequired: true,
                 availableValues: [
-                    { value: "active", label: "Ativo" },
-                    { value: "archived", label: "Arquivado" },
-                 
+                    {value: 'active' , label: 'Ativo'},
+                    {value: 'archived' , label: 'Arquivado'}
                 ],
             },
-            createdAt: {
+            createAt:{
                 position: 7,
-                isVisible: { list: true, filter: true, show: true, edit: false},
-
+                isVisible: { list: true, filter: true, show: true, edit: false}
             },
-            updatedAt: {
+            updateAt:{
                 position: 8,
-                isVisible: { list: true, filter: true, show: true, edit: false},
-
+                isVisible: { list: true, filter: true, show: true, edit: false}
             },
             password: {
-                isVisible: false,
+                isVisible: false
             },
             password_hash: {
-                isVisible: false,
-            },
-        }, 
-    },
-   
-};
+                isVisible: false
+            }
+        }
+    }
+}

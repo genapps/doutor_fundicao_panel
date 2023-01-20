@@ -1,17 +1,17 @@
-import Sequelize,{Model} from 'sequelize';
+import Sequelize, {Model} from "sequelize";
 
   class Task extends Model {
-  static init(Sequelize) {
+  static init(sequelize) {
    super.init(
     
   {
-    due_date: DataTypes.DATE,
-    effort: DataTypes.INTEGER,
-    title: DataTypes.STRING,
-    description: DataTypes.TEXT,
-    order: DataTypes.INTEGER,
-    status: DataTypes.ENUM(
-      "backlog",
+    due_date: Sequelize.DATE,
+    effort: Sequelize.INTEGER,
+    title: Sequelize.STRING,
+    description: Sequelize.TEXT,
+    order: Sequelize.INTEGER,
+    status: Sequelize.ENUM(
+        "backlog",
          "doing",
          "done",
          "approved",
@@ -41,7 +41,7 @@ import Sequelize,{Model} from 'sequelize';
     foreignKey: "user_id",
   });
 
-  this.belongsTo(models.User, {
+  this.belongsTo(models.Project, {
     foreignKey: "project_id",
   });
 
