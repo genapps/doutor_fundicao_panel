@@ -1,30 +1,52 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
+import Sequelize,{Model} from 'sequelize';
+
   class Task extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
-  }
-  Task.init({
+  static init(Sequelize) {
+   super.init(
+    
+  {
     due_date: DataTypes.DATE,
     effort: DataTypes.INTEGER,
     title: DataTypes.STRING,
     description: DataTypes.TEXT,
     order: DataTypes.INTEGER,
-    status: DataTypes.ENUM,
-    user_id: DataTypes.INTEGER,
-    project_id: DataTypes.INTEGER
-  }, {
+    status: DataTypes.ENUM(
+      "backlog",
+         "doing",
+         "done",
+         "approved",
+         "rejected" 
+    ),
+    user_id: Sequelize.INTEGER,
+    project_id: Sequelize.INTEGER,
+    path: Sequelize.STRING,
+    folder: Sequelize.STRING,
+    type: Sequelize.STRING,
+    filename: Sequelize.INTEGER,
+    size: Sequelize.INTEGER,
+  },
+  {
     sequelize,
-    modelName: 'Task',
+    name: {
+      singular: "task",
+      plural: "tasks",
+    },
+  }
+   );
+    
+ }
+
+ static associate(models) {
+  this.belongsTo(models.User, {
+    foreignKey: "user_id",
   });
-  return Task;
-};
+
+  this.belongsTo(models.User, {
+    foreignKey: "project_id",
+  });
+
+  }
+
+}
+
+export default Task;

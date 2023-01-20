@@ -31,6 +31,7 @@ class User extends Model {
   }
   static associations(models) {
     this.hasMany(models.Project);
+    this.hasMany(models.Task);
   }
 }
 export default User;
