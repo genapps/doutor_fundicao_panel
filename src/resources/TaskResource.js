@@ -1,5 +1,6 @@
 import AdminJS from "adminjs";
-
+import * as path from 'path';
+import uploadFileFeature from "@adminjs/upload";
 import Task from "../models/task";
 
 export default {
@@ -8,6 +9,7 @@ export default {
         parent:{
             icon: "Task",
         },
+
         properties: {
             id: {
               position: 1,
@@ -21,16 +23,16 @@ export default {
                 position: 3,
                 isVisible: { list: false, filter: false, show: true, edit: true },
                 type: "richtext",
-                //    quill: {
-                //         module: {
-                //            props: {
-                //   toolbar:[
-                //                 ["bold", "italic"],
-                //                 ["limk", "image"],
-                //             ],
-                //         },
-                //     },
-                // },
+                   quill: {
+                        module: {
+                           props: {
+                  toolbar:[
+                                ["bold", "italic"],
+                                ["limk", "image"],
+                            ],
+                        },
+                    },
+                },
             },
             due_date: {
                 position: 4,
@@ -92,4 +94,23 @@ export default {
             }  
          },
     },
+    features: [
+        uploadFileFeature({
+            provider: {
+              local: {
+                bucket: path.join(__dirname, "")
+              }
+            },
+        properties: {
+            key: 'path',
+            bucket: 'folder',
+            mimeType: 'type',
+            size:      'size',
+            filename: 'filename',
+            file: 'attachment',
+        }
+        }
+
+        )
+    ]
 };

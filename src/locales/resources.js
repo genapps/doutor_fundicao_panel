@@ -32,6 +32,20 @@ export default {
 
             },
         },
+        tasks: {
+            properties: {
+                id: 'ID',
+                due_date: "Data de entrega",
+                effort: "Esforço",
+                title: "Titulo",
+                description: "Descrição",
+                order: "Prioridade",
+                attachment: "Anexo",
+                projects: "Projeto",
+                userId: "Responsável",
+                ...commonProps,
+            },
+        },
     },
 
     
