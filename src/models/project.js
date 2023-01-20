@@ -12,8 +12,8 @@ class Project extends Model {
           {
             sequelize,
              name: {
-             singular: "Project",
-             plural: "Projects",
+             singular: "project",
+             plural: "projects",
             },
           }
     );

@@ -30,7 +30,7 @@ class User extends Model {
     );
   }
   static associations(models) {
-    // alguma associação
+    this.hasMany(models.Project);
   }
 }
 export default User;

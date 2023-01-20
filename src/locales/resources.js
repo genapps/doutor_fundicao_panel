@@ -14,12 +14,25 @@ export default {
             id: 'ID',
             initials: 'Iniciais',
             name: 'Nome',
-            email: 'Email',
+            description: "Descrição",
             password: 'Senha',
             passwordHash: 'Senha criptografada',
+            userId: "Responsável",
             role: 'Perfil',
             ...commonProps,
         },
+        projects: {
+            properties: {
+                id: "ID",
+                name: "Nome",
+                description: "Descrição",
+                userId: "Responsável",
+                ...commonProps,
+
+
+            },
+        },
     },
+
     
 };

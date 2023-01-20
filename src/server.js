@@ -7,7 +7,8 @@ import AdminJExpress from '@adminjs/express';
 import AdminJSSequelize from "@adminjs/sequelize";
 import express from "express";
 
-import UserResorouce from "./resources/UserResorouce";
+import UserResource from "./resources/UserResource";
+import ProjectResource from "./resources/ProjectResource ";
 
 import locale from "./locales";
 
@@ -18,7 +19,7 @@ const app = express();
 const adminJS = new AdminJS({
     databases: [],
     rootPath: '/admin',
-    resources: [UserResorouce],
+    resources: [UserResource, ProjectResource],
     ...locale,
 });
 

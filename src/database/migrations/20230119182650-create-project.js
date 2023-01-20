@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Projects', {
+    await queryInterface.createTable('projects', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -25,13 +25,13 @@ module.exports = {
         references: { model: 'users', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
-        allowNull: false,
+        allowNull: 'false',
       },
       created_at: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      created_at: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE
       }
