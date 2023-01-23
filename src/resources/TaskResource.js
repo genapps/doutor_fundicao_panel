@@ -113,9 +113,11 @@ export default {
             size:      'size',
             filename: 'filename',
             file: 'attachment',
-        }
-        }
-
-        )
-    ]
+        },
+        validation: {
+            mimeTypes: [ "image/png","application/pdf", "application/zip"],
+            maxSize: 5 * 1024 * 1024,
+        },
+        }),
+    ],
 };
