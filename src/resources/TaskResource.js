@@ -5,7 +5,7 @@ import Task from "../models/task";
 
 export default {
     resource: Task,
-    Option: {
+    options: {
         parent:{
             icon: "Task",
         },
@@ -74,6 +74,9 @@ export default {
                 position: 11,
                 isVisible: { list: false, filter: true, show: true, edit: false},
              }, 
+             attachment:{
+                position: 12,
+             },
             user_id: {
                 isVisible: false,
             },
@@ -91,7 +94,9 @@ export default {
             },
             filename: {
                 isVisible: false,
-            }  
+            },
+            size: {isVisible: false,
+            }, 
          },
     },
     features: [

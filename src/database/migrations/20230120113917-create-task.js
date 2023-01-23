@@ -50,11 +50,31 @@ module.exports = {
         onDelete: 'CASCADE',
         
       },
-      createdAt: {
+      path: {
+        type: Sequelize.STRING
+      },
+
+      folder: {
+        type: Sequelize.STRING
+      },
+      
+      type: {
+        type: Sequelize.STRING
+      },
+      
+      filename: {
+        type: Sequelize.STRING
+      },
+      
+      size: {
+        type: Sequelize.STRING
+      },
+
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE
       }

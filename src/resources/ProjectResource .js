@@ -4,7 +4,7 @@ import Project from "../models/project";
 
 export default {
     resource: Project,
-    Option: {
+    options: {
         parent:{
             icon: "Roadmap",
         },
