@@ -1,6 +1,6 @@
 import AdminJS from "adminjs";
 import * as path from 'path';
-import uploadFileFeature from "@adminjs/upload";
+import uploadFeature from "@adminjs/upload";
 import Task from "../models/task";
 
 export default {
@@ -95,10 +95,10 @@ export default {
          },
     },
     features: [
-        uploadFileFeature({
+        uploadFeature({
             provider: {
               local: {
-                bucket: path.join(__dirname, "")
+                bucket: path.join(__dirname, "../../uploads"),
               }
             },
         properties: {

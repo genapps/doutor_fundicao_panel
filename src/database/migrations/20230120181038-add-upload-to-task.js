@@ -13,7 +13,7 @@ module.exports = {
     queryInterface.addColumn("tasks", "filename", {
       type: Sequelize.DataTypes.STRING,
     });
-    queryInterface.addColumn("tasks", "paty", {
+    queryInterface.addColumn("tasks", "size", {
       type: Sequelize.DataTypes.INTEGER,
     });
    },
@@ -21,7 +21,7 @@ module.exports = {
    down: async (queryInterface, Sequelize) =>{
     return Promisse.all([
       queryInterface.removeColumn("tasks", "paty"),
-      queryInterface.removeColumn("tasks", "paty"),
+      queryInterface.removeColumn("tasks", "folder"),
       queryInterface.removeColumn("tasks", "type"),
       queryInterface.removeColumn("tasks", "filename"),
       queryInterface.removeColumn("tasks", "size"),

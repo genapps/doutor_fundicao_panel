@@ -22,7 +22,7 @@ import Sequelize, {Model} from "sequelize";
     path: Sequelize.STRING,
     folder: Sequelize.STRING,
     type: Sequelize.STRING,
-    filename: Sequelize.INTEGER,
+    filename: Sequelize.STRING,
     size: Sequelize.INTEGER,
   },
   {

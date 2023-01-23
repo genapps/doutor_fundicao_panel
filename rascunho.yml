@@ -13,6 +13,6 @@
 due_date:date,effort:integer,title:string,description:text,order:
 integer,status:enum,user_id:integer,project_id:integer
 
-11: yarn add @admonjs/upload
+11: yarn add @adminjs/upload
 12: npx sequelize-cli migration:generate --name add-upload-to-task
-13: yarn db:migration
+13: yarn db:migrate
