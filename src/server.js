@@ -12,7 +12,7 @@ import ProjectResource from "./resources/ProjectResource ";
 import TaskResource from "./resources/TaskResource";
 
 import locale from "./locales";
-
+import theme from "./theme";
 AdminJS.registerAdapter(AdminJSSequelize);
 
 const app = express();
@@ -24,6 +24,13 @@ const adminJS = new AdminJS({
         component: AdminJS.bundle("./components/Dashboard/index"),
     },
     resources: [UserResource, ProjectResource, TaskResource],
+    branding: {
+        companyName: 'Task Manager',
+        logo: false,
+        softwareBrothers: false,
+        theme,
+
+    },
     ...locale,
 });
 
