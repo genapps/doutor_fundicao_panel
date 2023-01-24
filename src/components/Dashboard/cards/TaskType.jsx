@@ -1,8 +1,12 @@
 import React from 'react'
+import { ApiClient } from "adminjs";
 import { Chart } from "react-google-charts";
 import { Card } from '../styles'
 import {Text, H5} from "@adminjs/design-system";
 
+// [Backlog, 1]
+// [Doing, 10]
+// [Approved, 2]
 
 const data = [
     ["Task", "Hours per Day"],
