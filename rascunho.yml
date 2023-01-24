@@ -16,4 +16,5 @@ integer,status:enum,user_id:integer,project_id:integer
 11: yarn add @adminjs/upload
 12: npx sequelize-cli migration:generate --name add-upload-to-task
 13: yarn db:migrate
-13: yarn add react-google-charts
+14: yarn add react-google-charts
+15: yarn add lodash

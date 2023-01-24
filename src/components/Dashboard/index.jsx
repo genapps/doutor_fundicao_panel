@@ -45,7 +45,7 @@ const Dashbard = () => {
           <Box width={[1, 1/ 2, 1 / 2]} p="lg">
             < TaskType />
           </Box>
-          <Box> width={[1, 1/ 2, 1 / 2]} p="lg"
+          <Box width={[1, 1/ 2, 1 / 2]} p="lg">
             <TaskEffort/>
 
           </Box>
