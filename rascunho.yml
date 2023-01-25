@@ -18,3 +18,4 @@ integer,status:enum,user_id:integer,project_id:integer
 13: yarn db:migrate
 14: yarn add react-google-charts
 15: yarn add lodash
+16: yarn add bcryptjs cookie-parser express-session
