@@ -5,8 +5,14 @@ import config from '../config/database';
 import User from "../models/user";
 import Project from "../models/project";
 import Task from "../models/task";
+import Timesheet from "../models/timesheet";
+import Curso from "../models/curso";
+import Ativos from "../models/ativos";
+import Enventos from "../models/eventos";
+import Servico from "../models/servico";
+import Clientes from "../models/clientes";
 
-const models = [User, Project, Task];
+const models = [User, Project, Task, Timesheet, Curso, Ativos, Enventos, Servico, Clientes];
 
 class Database {
   constructor() {

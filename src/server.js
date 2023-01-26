@@ -8,16 +8,21 @@ import AdminJSSequelize from "@adminjs/sequelize";
 import express from "express";
 
 import UserResource from "./resources/UserResource";
-import ProjectResource from "./resources/ProjectResource ";
+import ProjectResource from "./resources/ProjectResource";
 import TaskResource from "./resources/TaskResource";
-
+import TimesheetResource from "./resources/TimesheetResource";
+import CursoResource from "./resources/CursosResource ";
+import AtivosResource from "./models/ativos";
+import EnventosResource from "./models/eventos";
 import User from "./models/user";
-
-
+import ServicoResource from "./resources/ServicoResource ";
+import ClientesResource from "./resources/ClientesResource";
 
 import locale from "./locales";
 import theme from "./theme";
 import { password } from "./config/database";
+
+
 AdminJS.registerAdapter(AdminJSSequelize);
 
 const app = express();
@@ -28,7 +33,7 @@ const adminJS = new AdminJS({
     dashboard: {
         component: AdminJS.bundle("./components/Dashboard/index"),
     },
-    resources: [UserResource, ProjectResource, TaskResource],
+    resources: [UserResource, ProjectResource, TaskResource, TimesheetResource, CursoResource, AtivosResource, ServicoResource, ClientesResource],
     branding: {
         companyName: 'Task Manager',
         logo: false,
@@ -39,7 +44,7 @@ const adminJS = new AdminJS({
     ...locale,
 });
 
-//const router = AdminJExpress.buildRouter(adminJS);
+// const router = AdminJExpress.buildRouter(adminJS);
 const router = AdminJExpress.buildAuthenticatedRouter(adminJS, {
     authenticate: async (email, password) => {
         const user = await User.findOne({ where: { email } } );

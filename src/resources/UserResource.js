@@ -8,18 +8,18 @@ export default {
     resource: User,
     options: {
         actions: {
-            list: {
-                isAccessible: ({ currentAdmin}) => hasAdminPermission(currentAdmin)
-             },
-            resetPassword: {
-                actionType: 'record',
-                icon: "Password",
-                handler: async(request, response, context) => {
-                    return {
-                        record: context.record.toJSON(),
-                    };
-                },
-            },
+            // list: {
+            //     isAccessible: ({ currentAdmin}) => hasAdminPermission(currentAdmin)
+            //  },
+            // resetPassword: {
+            //     actionType: 'record',
+            //     icon: "Password",
+            //     handler: async(request, response, context) => {
+            //         return {
+            //             record: context.record.toJSON(),
+            //         };
+            //     },
+            // },
         },
         parent: {
             icon: "User",

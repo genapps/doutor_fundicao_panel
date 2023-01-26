@@ -3,8 +3,8 @@
 3: yarn add express-session
 4: yarn add @adminjs/sequelize dotenv postgres pg-hstore sequelizeS
 
-5: npx sequelize-cli model:generate --name Project --atributes name:String, email:string, password_hash:string
-6: yarn db:migratey
+5: npx sequelize-cli model:generate --name Project --attributes name:String, email:string, password_hash:string
+6: yarn db:migrate
 7: git add .
 8: git commit -m ""
 9: git push
@@ -20,3 +20,6 @@ integer,status:enum,user_id:integer,project_id:integer
 15: yarn add lodash
 16: yarn add bcryptjs cookie-parser express-
 17: npx sequelize-cli seed:generate --name.create-users
+
+
+npx sequelize-cli model:generate --name Timesheet --attributes inicio:Date, fim:Date
