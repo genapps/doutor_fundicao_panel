@@ -7,12 +7,14 @@ import Project from "../models/project";
 import Task from "../models/task";
 import Timesheet from "../models/timesheet";
 import Curso from "../models/curso";
-import Ativos from "../models/ativos";
-import Enventos from "../models/eventos";
+import Ativo from "../models/ativo";
+import Evento from "../models/evento";
 import Servico from "../models/servico";
-import Clientes from "../models/clientes";
+import Cliente from "../models/cliente";
+import Nota from "../models/nota";
+import Item from "../models/item";
 
-const models = [User, Project, Task, Timesheet, Curso, Ativos, Enventos, Servico, Clientes];
+const models = [User, Project, Task, Timesheet, Curso, Ativo, Evento, Servico, Cliente, Nota, Item];
 
 class Database {
   constructor() {

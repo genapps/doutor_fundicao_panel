@@ -1,20 +1,19 @@
 import Sequelize, {Model} from "sequelize";
 
-class Clientes extends Model {
+class Evento extends Model {
   static init (sequelize) {
     super.init(
           {
             nome: Sequelize.TEXT, 
-            cnpj: Sequelize.TEXT,
-            endereco:  Sequelize.TEXT,
-            email: Sequelize.TEXT,
-            senha: Sequelize.TEXT,
+            data: Sequelize.DATE,
+            endereco: Sequelize.TEXT,
+
             },
           {
             sequelize,
              name: {
-             singular: "cliente",
-             plural: "clientes",
+             singular: "evento",
+             plural: "eventos",
             },
           }
     );
@@ -23,5 +22,5 @@ class Clientes extends Model {
    
   }
 }
-export default Clientes;
+export default Evento;
 

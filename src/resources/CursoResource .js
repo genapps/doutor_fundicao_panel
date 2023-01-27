@@ -1,14 +1,9 @@
 import AdminJS from "adminjs";
 import Curso from "../models/curso";
-
-import Project from "../models/curso";
-
 import { hasManagerPermission } from "../services/auth";
-import Ativos from "../models/ativos";
-import Clientes from "../models/clientes";
 
 export default {
-    resource: Clientes,
+    resource: Curso,
     options: {
         parent:{
             icon: "Roadmap",
@@ -28,31 +23,25 @@ export default {
             id: {
               position: 1,
             },
-            nome:{
+            name:{
                 position:2,
                 isRequired: true,
     
             },
-            cnpj: {
+            observacao: {
                 position: 3,
                 type: "textarea",
             },
-            endereco: {
+            descricao: {
                 position: 4,
             },
-            email: {
-                position: 5,
-            },
-            senha: {
-                position: 6,
-            },
             createdAt: {
-                position: 7,
+                position: 5,
                 isVisible: { list: true, filter: true, show: true, edit: false},
 
             },
             updatedAt: {
-                position: 8,
+                position: 6,
                 isVisible: { list: true, filter: true, show: true, edit: false},
             },             
         }, 

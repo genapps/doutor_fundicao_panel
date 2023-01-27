@@ -1,13 +1,9 @@
 import AdminJS from "adminjs";
-import Curso from "../models/curso";
-
-import Project from "../models/curso";
-
 import { hasManagerPermission } from "../services/auth";
-import Ativos from "../models/ativos";
+import Nota from "../models/nota";
 
 export default {
-    resource: Ativos,
+    resource: Nota,
     options: {
         parent:{
             icon: "Roadmap",
@@ -32,26 +28,45 @@ export default {
                 isRequired: true,
     
             },
-            observacao: {
-                position: 3,
-                type: "textarea",
-            },
-            local: {
-                position: 4,
-            },
-            codigo: {
-                position: 5,
-            },
-            data: {
-                position: 6,
-            },
+            // empresa: {
+            //     position: 3,
+            //     type: "textarea",
+            // },
+            // cidade: {
+            //     position: 4,
+            // },
+            // bairro: {
+            //     position: 5,
+            // },
+            // cnpj: {
+            //     position: 6,
+            // },
+            // quantidade: {
+            //     position: 7,
+            // },
+            // total: {
+            //     position: 8,
+            // },
+            // valortotal: {
+            //     position: 9,
+            // },
+            // descricao: {
+            //     position: 10,
+            // },
+            // data: {
+            //     position: 11,
+            // },
+            // endereco: {
+            //     position: 12,
+            // },
+
             createdAt: {
-                position: 7,
+                position: 13,
                 isVisible: { list: true, filter: true, show: true, edit: false},
 
             },
             updatedAt: {
-                position: 8,
+                position: 14,
                 isVisible: { list: true, filter: true, show: true, edit: false},
             },             
         }, 

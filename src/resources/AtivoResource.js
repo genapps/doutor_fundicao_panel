@@ -1,12 +1,9 @@
 import AdminJS from "adminjs";
-import Curso from "../models/curso";
-
-import Project from "../models/curso";
-
 import { hasManagerPermission } from "../services/auth";
+import Ativo from "../models/ativo";
 
 export default {
-    resource: Curso,
+    resource: Ativo,
     options: {
         parent:{
             icon: "Roadmap",
@@ -26,7 +23,7 @@ export default {
             id: {
               position: 1,
             },
-            name:{
+            nome:{
                 position:2,
                 isRequired: true,
     
@@ -35,16 +32,22 @@ export default {
                 position: 3,
                 type: "textarea",
             },
-            descricao: {
+            local: {
                 position: 4,
             },
-            createdAt: {
+            codigo: {
                 position: 5,
+            },
+            data: {
+                position: 6,
+            },
+            createdAt: {
+                position: 7,
                 isVisible: { list: true, filter: true, show: true, edit: false},
 
             },
             updatedAt: {
-                position: 6,
+                position: 8,
                 isVisible: { list: true, filter: true, show: true, edit: false},
             },             
         }, 
