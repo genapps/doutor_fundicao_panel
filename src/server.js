@@ -47,7 +47,7 @@ const adminJS = new AdminJS({
     ...locale,
 });
 
-const router = AdminJExpress.buildRouter(adminJS);
+ const router = AdminJExpress.buildRouter(adminJS);
 // const router = AdminJExpress.buildAuthenticatedRouter(adminJS, {
 //     authenticate: async (email, password) => {
 //         const user = await User.findOne({ where: { email } } );

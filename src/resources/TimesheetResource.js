@@ -10,17 +10,17 @@ export default {
         parent:{
             icon: "Roadmap",
         },
-        actions: {
-            new: {
-                isAccessible: ({ currentAdmin }) => hasManagerPermission(currentAdmin),
-            },
-            edit: {
-                isAccessible: ({ currentAdmin }) => hasManagerPermission(currentAdmin),
-            },
-            delete: {
-                isAccessible: ({ currentAdmin }) => hasManagerPermission(currentAdmin),           
-             },
-        },
+        // actions: {
+        //     new: {
+        //         isAccessible: ({ currentAdmin }) => hasManagerPermission(currentAdmin),
+        //     },
+        //     edit: {
+        //         isAccessible: ({ currentAdmin }) => hasManagerPermission(currentAdmin),
+        //     },
+        //     delete: {
+        //         isAccessible: ({ currentAdmin }) => hasManagerPermission(currentAdmin),           
+        //      },
+        // },
         properties: {
             id: {
                 position: 1,

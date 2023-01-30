@@ -28,37 +28,37 @@ export default {
                 isRequired: true,
     
             },
-            // empresa: {
-            //     position: 3,
-            //     type: "textarea",
-            // },
-            // cidade: {
-            //     position: 4,
-            // },
-            // bairro: {
-            //     position: 5,
-            // },
-            // cnpj: {
-            //     position: 6,
-            // },
-            // quantidade: {
-            //     position: 7,
-            // },
-            // total: {
-            //     position: 8,
-            // },
-            // valortotal: {
-            //     position: 9,
-            // },
-            // descricao: {
-            //     position: 10,
-            // },
-            // data: {
-            //     position: 11,
-            // },
-            // endereco: {
-            //     position: 12,
-            // },
+            empresa: {
+                position: 3,
+                type: "textarea",
+            },
+            cidade: {
+                position: 4,
+            },
+            bairro: {
+                position: 5,
+            },
+            cnpj: {
+                position: 6,
+            },
+            quantidade: {
+                position: 7,
+            },
+            total: {
+                position: 8,
+            },
+            valortotal: {
+                position: 9,
+            },
+            descricao: {
+                position: 10,
+            },
+            data: {
+                position: 11,
+            },
+            endereco: {
+                position: 12,
+            },
 
             createdAt: {
                 position: 13,

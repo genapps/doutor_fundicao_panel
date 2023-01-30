@@ -10,29 +10,29 @@ export default {
         parent:{
             icon: "Roadmap",
         },
-        actions: {
-            new: {
-                isAccessible: ({ currentAdmin }) => hasManagerPermission(currentAdmin),
-            },
-            edit: {
-                isAccessible: ({ currentAdmin }) => hasManagerPermission(currentAdmin),
-            },
-            delete: {
-                isAccessible: ({ currentAdmin }) => hasManagerPermission(currentAdmin),           
-             },
-        },
+        // actions: {
+        //     new: {
+        //         isAccessible: ({ currentAdmin }) => hasManagerPermission(currentAdmin),
+        //     },
+        //     edit: {
+        //         isAccessible: ({ currentAdmin }) => hasManagerPermission(currentAdmin),
+        //     },
+        //     delete: {
+        //         isAccessible: ({ currentAdmin }) => hasManagerPermission(currentAdmin),           
+        //      },
+        // },
         properties: {
             id: {
               position: 1,
             },
             name:{
                 position:2,
-                isRequired: true,
+                //isRequired: true,
     
             },
             description: {
                 position: 3,
-                type: "textarea",
+               // type: "textarea",
             },
             userId: {
                 position: 4,
