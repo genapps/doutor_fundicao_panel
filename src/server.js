@@ -22,7 +22,9 @@ import locale from "./locales";
 import theme from "./theme";
 import { password } from "./config/database";
 import ItemResource from "./resources/ItemResource ";
-
+import EscolaResource from "./resources/EscolaResource"
+import Cartaocredito from "./models/cartaocredito";
+import CartaocreditoResource from "./resources/CartaocreditoResource";
 
 AdminJS.registerAdapter(AdminJSSequelize);
 
@@ -34,7 +36,7 @@ const adminJS = new AdminJS({
     dashboard: {
         component: AdminJS.bundle("./components/Dashboard/index"),
     },
-    resources: [UserResource, ProjectResource, TaskResource, TimeheetResource, CursoResource, AtivoResource, ServicoResource, ClienteResource, NotaResource, ItemResource, EnventoResource],
+    resources: [UserResource, ProjectResource, TaskResource, TimeheetResource, CursoResource, AtivoResource, ServicoResource, ClienteResource, NotaResource, ItemResource, EnventoResource, EscolaResource, CartaocreditoResource],
     branding: {
         companyName: 'Task Manager',
         logo: false,

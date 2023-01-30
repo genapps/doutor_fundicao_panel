@@ -13,8 +13,10 @@ import Servico from "../models/servico";
 import Cliente from "../models/cliente";
 import Nota from "../models/nota";
 import Item from "../models/item";
+import Escola from "../models/escola";
+import Cartaocredito from "../models/cartaocredito";
 
-const models = [User, Project, Task, Timesheet, Curso, Ativo, Evento, Servico, Cliente, Nota, Item];
+const models = [User, Project, Task, Timesheet, Curso, Ativo, Evento, Servico, Cliente, Nota, Item, Escola,Cartaocredito];
 
 class Database {
   constructor() {

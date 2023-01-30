@@ -7,11 +7,13 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
+        
         type: Sequelize.INTEGER
       },
       quantidade: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        
       },
       id_nota: {
         type: Sequelize.INTEGER,
