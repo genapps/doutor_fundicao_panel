@@ -9,6 +9,8 @@ import express from "express";
 
 import UserResource from "./resources/UserResource";
  import ProjetoResource from "./resources/ProjetoResource";
+ import TarefaResource from "./resources/TarefaResource";
+ import LancamentoResource from "./resources/LancamentoResource";
 import User from "./models/user";
 
 import { password } from "./config/database";
@@ -20,7 +22,7 @@ const app = express();
 const adminJS = new AdminJS({
     databases: [],
     rootPath: '/admin',
-    resources: [UserResource,ProjetoResource],
+    resources: [UserResource,ProjetoResource,TarefaResource,LancamentoResource],
     branding: {
         companyName: 'Task Manager',
         logo: false,
