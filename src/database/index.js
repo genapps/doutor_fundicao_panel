@@ -3,20 +3,8 @@ import  Sequelize from "sequelize";
 import config from '../config/database';
 
 import User from "../models/user";
-import Project from "../models/project";
-import Task from "../models/task";
-import Timesheet from "../models/timesheet";
-import Curso from "../models/curso";
-import Ativo from "../models/ativo";
-import Evento from "../models/evento";
-import Servico from "../models/servico";
-import Cliente from "../models/cliente";
-import Nota from "../models/nota";
-import Item from "../models/item";
-import Escola from "../models/escola";
-import Cartaocredito from "../models/cartaocredito";
 
-const models = [User, Project, Task, Timesheet, Curso, Ativo, Evento, Servico, Cliente, Nota, Item, Escola,Cartaocredito];
+const models = [User];
 
 class Database {
   constructor() {

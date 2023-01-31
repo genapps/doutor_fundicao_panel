@@ -43,8 +43,7 @@ class User extends Model {
   }
 
   static associations(models) {
-    this.hasMany(models.Project);
-    this.hasMany(models.Task);    
+      
   }
 
   checkPassword(password) {

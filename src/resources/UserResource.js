@@ -28,10 +28,6 @@ export default {
             id: {
                 position: 1,
             },
-            initials: {
-                position: 2,
-                isVisible: {list: true, filter: false, show: true, edit: false},
-            },
             name: {
                 position: 3,
                 isRequired: true,
@@ -72,8 +68,11 @@ export default {
             },
            
             password_hash: {
+
+            },
+            initials: {
                 isVisible: false
-            }
+            },            
         }
     }
 }

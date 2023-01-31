@@ -1,5 +1,5 @@
 {
-  "name": "task-manager-dev",
+  "name": "genapps-panel",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -26,9 +26,7 @@
     "tslib": "^2.4.1"
   },
   "scripts": {
-    "dev": "nodemon ./src/server.js",
-    "db:migrate": "sequelize-cli db:migrate",
-    "db:undo": "sequelize-cli db:migrate:undo"
+    "dev": "nodemon ./src/server.js"
   },
   "devDependencies": {
     "sequelize-cli": "^6.5.2"
