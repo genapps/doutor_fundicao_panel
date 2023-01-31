@@ -8,6 +8,7 @@ import AdminJSSequelize from "@adminjs/sequelize";
 import express from "express";
 
 import UserResource from "./resources/UserResource";
+ import ProjetoResource from "./resources/ProjetoResource";
 import User from "./models/user";
 
 import { password } from "./config/database";
@@ -19,7 +20,7 @@ const app = express();
 const adminJS = new AdminJS({
     databases: [],
     rootPath: '/admin',
-    resources: [UserResource],
+    resources: [UserResource,ProjetoResource],
     branding: {
         companyName: 'Task Manager',
         logo: false,

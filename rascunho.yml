@@ -23,3 +23,4 @@ integer,status:enum,user_id:integer,project_id:integer
 
 
 npx sequelize-cli model:generate --name Timesheet --attributes inicio:Date, fim:Date
+18: nextval('users_id_seq'::regclass)
