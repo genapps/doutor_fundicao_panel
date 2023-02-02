@@ -124,3 +124,5 @@ TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public.lancamentos
     OWNER to postgres;
+
+    nextval('classificacao_id_seq'::regclass)

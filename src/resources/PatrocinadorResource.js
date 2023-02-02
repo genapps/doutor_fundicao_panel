@@ -1,11 +1,11 @@
 import AdminJS from "adminjs";
 
-import Tarefa from "../models/tarefa";
+import Patrocinador from "../models/patrocinador";
 
 import { hasAdminPermission } from "../services/auth";
 
 export default {
-    resource: Tarefa,
+    resource: Patrocinador,
     options: {
         actions: {
             // list: {
@@ -22,28 +22,26 @@ export default {
             // },
         },
         parent: {
-            icon: "Tarefa",
+            icon: "Patrocinador",
         },
         properties: {
             id: {
                 position: 1,
             },
+            imagem: {
+                position: 2,
+                isRequired: true,
+            },
             descricao: {
                 position: 2,
                 isRequired: true,
             },
-            qtd_horas: {
-                position: 3,
-                isRequired: true,
-            },
-
-            
             createAt:{
-                position: 4,
+                position: 3,
                 isVisible: { list: true, filter: true, show: true, edit: false}
             },
             updateAt:{
-                position: 5,
+                position: 4,
                 isVisible: { list: true, filter: true, show: true, edit: false}
             },
            

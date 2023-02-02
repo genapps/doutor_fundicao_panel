@@ -1,11 +1,11 @@
 import AdminJS from "adminjs";
 
-import Lancamento from "../models/lancamento";
+import Subclassificacao from "../models/subclassificacao";
 
 import { hasAdminPermission } from "../services/auth";
 
 export default {
-    resource: Lancamento,
+    resource: Subclassificacao,
     options: {
         actions: {
             // list: {
@@ -22,37 +22,26 @@ export default {
             // },
         },
         parent: {
-            icon: "Lancamento",
+            icon: "User",
         },
         properties: {
             id: {
                 position: 1,
             },
-            
-            inicio: {
-                position: 3,
-                isRequired: true,
-            },
-            fim: {
-                position: 4,
-                isRequired: true,
-            },
-            qtd_hora: {
-                position: 5,
+            classificacao: {
+                position: 2,
                 isRequired: true,
             },
             descricao: {
-                position: 5,
+                position: 3,
                 isRequired: true,
             },
-
-            
             createAt:{
-                position: 6,
+                position: 4,
                 isVisible: { list: true, filter: true, show: true, edit: false}
             },
             updateAt:{
-                position: 7,
+                position: 5,
                 isVisible: { list: true, filter: true, show: true, edit: false}
             },
            

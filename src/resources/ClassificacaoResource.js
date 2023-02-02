@@ -1,11 +1,11 @@
 import AdminJS from "adminjs";
 
-import User from "../models/user";
+import Classificacao from "../models/classificacao";
 
 import { hasAdminPermission } from "../services/auth";
 
 export default {
-    resource: User,
+    resource: Classificacao,
     options: {
         actions: {
             // list: {
@@ -22,50 +22,34 @@ export default {
             // },
         },
         parent: {
-            icon: "User",
+            icon: "Classificacao",
         },
         properties: {
             id: {
                 position: 1,
             },
-            name: {
+            codigo: {
+                position: 2,
+                isRequired: true,
+            },
+            nome: {
                 position: 3,
                 isRequired: true,
             },
-            email: {
-                position: 4,
-                isRequired: true,
-            },
-            password: {
-                position: 5,
-                isVisible: false,
-                isVisible: { list: false, filter:false, show: false, edit: true},
-            },
-            role: {
-                position: 6,
-                isRequired: true,
-                availableValues: [
-                    {value: 'admin' , label: 'Administrador'},
-                    {value: 'manager' , label: 'Gerente'},
-                    {value: 'developer' , label: 'Desenvolvedor'}
-                ],
-            },
-            status: {
-                position: 7,
-                isRequired: true,
-                availableValues: [
-                    {value: 'active' , label: 'Ativo'},
-                    {value: 'archived' , label: 'Arquivado'}
-                ],
-            },
+           
             createAt:{
-                position: 8,
+                position: 9,
                 isVisible: { list: true, filter: true, show: true, edit: false}
             },
             updateAt:{
-                position: 9,
+                position: 10,
                 isVisible: { list: true, filter: true, show: true, edit: false}
-            }           
+            },
+           
+           
+            initials: {
+                isVisible: false
+            },            
         }
     }
 }

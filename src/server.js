@@ -8,9 +8,10 @@ import AdminJSSequelize from "@adminjs/sequelize";
 import express from "express";
 
 import UserResource from "./resources/UserResource";
- import ProjetoResource from "./resources/ProjetoResource";
- import TarefaResource from "./resources/TarefaResource";
- import LancamentoResource from "./resources/LancamentoResource";
+import CaracterizacaoResource from "./resources/CaracterizacaoResource";
+import ClassificacaoResource from "./resources/ClassificacaoResource";
+import PatrocinadorResource from "./resources/PatrocinadorResource";
+import SubclassificacaoResource from "./resources/SubclassificacaoResource";
 import User from "./models/user";
 
 import { password } from "./config/database";
@@ -22,7 +23,7 @@ const app = express();
 const adminJS = new AdminJS({
     databases: [],
     rootPath: '/admin',
-    resources: [UserResource,ProjetoResource,TarefaResource,LancamentoResource],
+    resources: [UserResource, CaracterizacaoResource, ClassificacaoResource, PatrocinadorResource, SubclassificacaoResource],
     branding: {
         companyName: 'Task Manager',
         logo: false,
@@ -30,7 +31,7 @@ const adminJS = new AdminJS({
     },
 });
 
- //const router = AdminJExpress.buildRouter(adminJS);
+// const router = AdminJExpress.buildRouter(adminJS);
 const router = AdminJExpress.buildAuthenticatedRouter(adminJS, {
     authenticate: async (email, password) => {
         const user = await User.findOne({ where: { email } } );

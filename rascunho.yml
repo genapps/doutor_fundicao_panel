@@ -24,3 +24,19 @@ integer,status:enum,user_id:integer,project_id:integer
 
 npx sequelize-cli model:generate --name Timesheet --attributes inicio:Date, fim:Date
 18: nextval('users_id_seq'::regclass)
+
+19: 
+UPDATE public.lancamentos
+	SET id=?, fim=?, qtd_hora=?, updated_at=?, created_at=?, inicio=?, descricao=?, id_tarefas=?
+	WHERE <condition>;
+	
+UPDATE public.lancamentos
+	SET  id
+
+UPDATE public.classificacaos
+	SET  updated_at=now(), created_at=now()	
+
+	nextval('patrocinador_id_seq'::regclass)
+
+	INSERT INTO "patrocinadors" ("id","descricao","imagem","created_at","updated_at")
+VALUES (DEFAULT, 'deste', 'dd', now(), now())

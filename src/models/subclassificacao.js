@@ -1,22 +1,23 @@
 import Sequelize, {Model} from "sequelize";
 import {createPasswordHash, checkPassword1} from '../services/auth'
 
-class Projeto extends Model {
+class Subclassificacao extends Model {
   static init (sequelize) {
     super.init(
           {
-         
-          nome: Sequelize.STRING,
-          inicio: Sequelize.DATE,
-          fim: Sequelize.DATE,
-        
+          classificacao: Sequelize.STRING,
+          descricao: Sequelize.STRING,
+              
           }, 
           {
             sequelize, name: {
-             singular: 'projeto',
-             plural: 'projetos'
+             singular: 'subclassificacao',
+             plural: 'subclassificacaos',
             },
-          }
+          },
+          {
+            freezeTableName: true
+          }          
     );
 
     this.addHook('beforeSave' , async (user) =>  {
@@ -39,5 +40,5 @@ class Projeto extends Model {
   }
 }
 
-export default Projeto;
+export default Subclassificacao;
   

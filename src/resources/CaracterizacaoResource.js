@@ -1,11 +1,11 @@
 import AdminJS from "adminjs";
 
-import Projeto from "../models/projeto";
+import Caracterizacao from "../models/caracterizacao";
 
 import { hasAdminPermission } from "../services/auth";
 
 export default {
-    resource: Projeto,
+    resource: Caracterizacao,
     options: {
         actions: {
             // list: {
@@ -22,32 +22,35 @@ export default {
             // },
         },
         parent: {
-            icon: "Projeto",
+            icon: "User",
         },
         properties: {
             id: {
                 position: 1,
             },
-            nome: {
+            codigo: {
                 position: 2,
                 isRequired: true,
             },
-            inicio: {
+            descricao: {
                 position: 3,
                 isRequired: true,
             },
-            fim: {
+            subclassificacao: {
                 position: 4,
                 isRequired: true,
             },
-
-            
-            createAt:{
+            tipocodigo: {
                 position: 5,
+                isRequired: true,
+            },
+           
+            createAt:{
+                position: 9,
                 isVisible: { list: true, filter: true, show: true, edit: false}
             },
             updateAt:{
-                position: 6,
+                position: 10,
                 isVisible: { list: true, filter: true, show: true, edit: false}
             },
            
