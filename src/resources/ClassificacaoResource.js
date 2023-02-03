@@ -32,24 +32,14 @@ export default {
                 position: 2,
                 isRequired: true,
             },
-            nome: {
+            name: {
                 position: 3,
                 isRequired: true,
             },
-           
-            createAt:{
-                position: 9,
-                isVisible: { list: true, filter: true, show: true, edit: false}
-            },
-            updateAt:{
-                position: 10,
-                isVisible: { list: true, filter: true, show: true, edit: false}
-            },
-           
-           
-            initials: {
-                isVisible: false
-            },            
+                        
+            id_classificacao:{
+                isVisible : false,
+            }
         }
     }
 }

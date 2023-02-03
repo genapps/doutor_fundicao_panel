@@ -28,36 +28,21 @@ export default {
             id: {
                 position: 1,
             },
-            codigo: {
+            id_subclassificacao: {
                 position: 2,
-                isRequired: true,
-            },
-            descricao: {
+            },  
+            name: {
                 position: 3,
                 isRequired: true,
-            },
-            subclassificacao: {
+            },            
+            codigo: {
                 position: 4,
                 isRequired: true,
             },
-            tipocodigo: {
+            tipo: {
                 position: 5,
                 isRequired: true,
-            },
-           
-            createAt:{
-                position: 9,
-                isVisible: { list: true, filter: true, show: true, edit: false}
-            },
-            updateAt:{
-                position: 10,
-                isVisible: { list: true, filter: true, show: true, edit: false}
-            },
-           
-           
-            initials: {
-                isVisible: false
-            },            
+            }         
         }
     }
 }

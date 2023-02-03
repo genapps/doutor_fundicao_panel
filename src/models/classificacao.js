@@ -6,7 +6,7 @@ class Classificacao extends Model {
     super.init(
           {
           codigo: Sequelize.STRING,
-          nome: Sequelize.STRING,
+          name: Sequelize.STRING,
                   
           }, 
           {
@@ -19,24 +19,10 @@ class Classificacao extends Model {
             freezeTableName: true
           }          
     );
-
-    this.addHook('beforeSave' , async (user) =>  {
-       if(user.password) {
-          user.password_hash = await createPasswordHash(user.password);
-       }
-       console.log(user.password);
-    }
-    
-    )
   }
 
   static associations(models) {
       
-  }
-
-  checkPassword(password) {
-    console.log('Password ', password);                
-    return checkPassword1(this, password);
   }
 }
 

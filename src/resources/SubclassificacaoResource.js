@@ -28,27 +28,13 @@ export default {
             id: {
                 position: 1,
             },
-            classificacao: {
+            id_classificacao: {
                 position: 2,
-                isRequired: true,
-            },
-            descricao: {
+            },            
+            name: {
                 position: 3,
                 isRequired: true,
-            },
-            createAt:{
-                position: 4,
-                isVisible: { list: true, filter: true, show: true, edit: false}
-            },
-            updateAt:{
-                position: 5,
-                isVisible: { list: true, filter: true, show: true, edit: false}
-            },
-           
-           
-            initials: {
-                isVisible: false
-            },            
+            }          
         }
     }
 }

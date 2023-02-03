@@ -36,7 +36,7 @@ UPDATE public.lancamentos
 UPDATE public.classificacaos
 	SET  updated_at=now(), created_at=now()	
 
-	nextval('patrocinador_id_seq'::regclass)
+	nextval('subclassificacao_id_seq'::regclass)
 
 	INSERT INTO "patrocinadors" ("id","descricao","imagem","created_at","updated_at")
 VALUES (DEFAULT, 'deste', 'dd', now(), now())

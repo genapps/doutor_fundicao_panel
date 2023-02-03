@@ -6,9 +6,14 @@ class Caracterizacao extends Model {
     super.init(
           {
           codigo: Sequelize.STRING,
-          descricao: Sequelize.STRING,
-          subclassificacao: Sequelize.STRING,
-          tipocodigo: Sequelize.STRING,          
+          name: Sequelize.STRING,
+          tipo: Sequelize.STRING,
+          id_subclassificacao: {
+            type:  Sequelize.INTEGER,
+            references: { model : "subclassificacaos", key: "id"}, 
+            allowNull: false,
+            }
+
           }, 
           {
             sequelize, name: {
@@ -20,24 +25,12 @@ class Caracterizacao extends Model {
             freezeTableName: true
           }          
     );
-
-    this.addHook('beforeSave' , async (user) =>  {
-       if(user.password) {
-          user.password_hash = await createPasswordHash(user.password);
-       }
-       console.log(user.password);
-    }
-    
-    )
   }
 
   static associations(models) {
-      
-  }
-
-  checkPassword(password) {
-    console.log('Password ', password);                
-    return checkPassword1(this, password);
+    this.belongsTo(models.subclassificacao,  {
+      foreignKey: "id_subclassificacao",
+    });
   }
 }
 
