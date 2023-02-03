@@ -42,7 +42,22 @@ export default {
             tipo: {
                 position: 5,
                 isRequired: true,
-            }         
+            },
+            descricao: {
+                position: 6,
+                isVisible: { list: false, filter: false, show: true, edit: true },
+                type: "richtext",
+                //    quill: {
+                //         module: {
+                //            props: {
+                //   toolbar:[
+                //                 ["bold", "italic"],
+                //                 ["limk", "image"],
+                //             ],
+                //         },
+                //     },
+                // },
+            },                     
         }
     }
 }

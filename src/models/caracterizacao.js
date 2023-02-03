@@ -12,7 +12,7 @@ class Caracterizacao extends Model {
             type:  Sequelize.INTEGER,
             references: { model : "subclassificacaos", key: "id"}, 
             allowNull: false,
-            }
+          },
 
           }, 
           {
