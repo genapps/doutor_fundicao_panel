@@ -7,8 +7,10 @@ import Caracterizacao from "../models/caracterizacao";
 import Classificacao from "../models/classificacao";
 import Patrocinador from "../models/patrocinador";
 import Subclassificacao from "../models/subclassificacao";
+import Imagem from "../models/imagem";
 
-const models = [User, Caracterizacao, Classificacao, Patrocinador, Subclassificacao];
+
+const models = [User, Caracterizacao, Classificacao, Patrocinador, Subclassificacao, Imagem];
 
 class Database {
   constructor() {

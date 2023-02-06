@@ -12,6 +12,7 @@ import CaracterizacaoResource from "./resources/CaracterizacaoResource";
 import ClassificacaoResource from "./resources/ClassificacaoResource";
 import PatrocinadorResource from "./resources/PatrocinadorResource";
 import SubclassificacaoResource from "./resources/SubclassificacaoResource";
+import ImagemResource from "./resources/ImagemResource";
 import User from "./models/user";
 
 import { password } from "./config/database";
@@ -23,7 +24,7 @@ const app = express();
 const adminJS = new AdminJS({
     databases: [],
     rootPath: '/admin',
-    resources: [UserResource, CaracterizacaoResource, ClassificacaoResource, PatrocinadorResource, SubclassificacaoResource],
+    resources: [UserResource, CaracterizacaoResource, ClassificacaoResource, PatrocinadorResource, SubclassificacaoResource, ImagemResource],
     branding: {
         companyName: 'Task Manager',
         logo: false,
