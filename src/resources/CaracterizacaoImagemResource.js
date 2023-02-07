@@ -1,10 +1,10 @@
 import AdminJS from "adminjs";
 import * as path from 'path';
 import uploadFeature from "@adminjs/upload";
-import Imagem from "../models/imagem";
+import CaracterizacaoImagem from "../models/caracterizacaoImagem";
 
 export default {
-    resource: Imagem,
+    resource: CaracterizacaoImagem,
     options: {
         parent:{
             icon: "Imagem",
@@ -14,50 +14,6 @@ export default {
             id: {
               position: 1,
             },
-           
-            // description: {
-            //     position: 3,
-            //     isVisible: { list: false, filter: false, show: true, edit: true },
-            //     type: "richtext",
-            //        quill: {
-            //             module: {
-            //                props: {
-            //       toolbar:[
-            //                     ["bold", "italic"],
-            //                     ["limk", "image"],
-            //                 ],
-            //             },
-            //         },
-            //     },
-            // },
-            // due_date: {
-            //     position: 4,
-            // },
-            // effort: {
-            //     position: 5, 
-            // },
-            // order: {
-            //     position: 6,
-            // },
-            // status: {
-            //     position: 7,
-            //     isRequired: true,
-            //     availableValues: [
-            //         { value: "backlog", label: "Backlog" },
-            //         { value: "doing", label: "Em Execução" },
-            //         { value: "done", label: "Pronto" },
-            //         { value: "approved", label: "Aprovado" },
-            //         { value: "rejected", label: "Rejeitado" },
-
-            //     ],
-            // },
-            // projectId: {
-            //     position: 8,
-            //     isRequired: true,
-            //     isVisible: { list: false, filter: false, show: true, edit: true},
-
-            // },
-           
             createAt:{
                 position: 10,
                 isVisible: { list: false, filter: false, show: true, edit: false},

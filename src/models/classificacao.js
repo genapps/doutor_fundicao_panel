@@ -6,18 +6,13 @@ class Classificacao extends Model {
     super.init(
           {
           codigo: Sequelize.STRING,
-          name: Sequelize.STRING,
-                  
+          name: Sequelize.STRING,                  
           }, 
           {
-            sequelize, name: {
-             singular: 'classificacao',
-             plural: 'classificacaos',
-            },
-          },
-          {
+            sequelize,
+            modelName: 'classificacao',
             freezeTableName: true
-          }          
+          },        
     );
   }
 

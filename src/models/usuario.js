@@ -1,7 +1,7 @@
 import Sequelize, {Model} from "sequelize";
 import {createPasswordHash, checkPassword1} from '../services/auth'
 
-class User extends Model {
+class Usuario extends Model {
   static init (sequelize) {
     super.init(
           {
@@ -25,11 +25,10 @@ class User extends Model {
           status: Sequelize.ENUM('active', 'archived'),
           }, 
           {
-            sequelize, name: {
-             singular: 'user',
-             plural: 'users'
-            },
-          }
+            sequelize,
+            modelName: 'usuario',
+            freezeTableName: true
+          },    
     );
 
     this.addHook('beforeSave' , async (user) =>  {
@@ -52,5 +51,5 @@ class User extends Model {
   }
 }
 
-export default User;
+export default Usuario;
   

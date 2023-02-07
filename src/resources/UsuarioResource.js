@@ -1,26 +1,12 @@
 import AdminJS from "adminjs";
 
-import User from "../models/user";
+import Usuario from "../models/usuario";
 
 import { hasAdminPermission } from "../services/auth";
 
 export default {
-    resource: User,
+    resource: Usuario,
     options: {
-        actions: {
-            // list: {
-            //     isAccessible: ({ currentAdmin}) => hasAdminPermission(currentAdmin)
-            //  },
-            // resetPassword: {
-            //     actionType: 'record',
-            //     icon: "Password",
-            //     handler: async(request, response, context) => {
-            //         return {
-            //             record: context.record.toJSON(),
-            //         };
-            //     },
-            // },
-        },
         parent: {
             icon: "User",
         },

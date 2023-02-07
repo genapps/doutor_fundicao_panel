@@ -10,20 +10,16 @@ class Caracterizacao extends Model {
           tipo: Sequelize.STRING,
           id_subclassificacao: {
             type:  Sequelize.INTEGER,
-            references: { model : "subclassificacaos", key: "id"}, 
+            references: { model : "subclassificacao", key: "id"}, 
             allowNull: false,
           },
 
           }, 
           {
-            sequelize, name: {
-             singular: 'caracterizacao',
-             plural: 'caracterizacoes',
-            },
-          },
-          {
+            sequelize,
+            modelName: 'caracterizacao',
             freezeTableName: true
-          }          
+          },             
     );
   }
 

@@ -7,20 +7,6 @@ import { hasAdminPermission } from "../services/auth";
 export default {
     resource: Caracterizacao,
     options: {
-        actions: {
-            // list: {
-            //     isAccessible: ({ currentAdmin}) => hasAdminPermission(currentAdmin)
-            //  },
-            // resetPassword: {
-            //     actionType: 'record',
-            //     icon: "Password",
-            //     handler: async(request, response, context) => {
-            //         return {
-            //             record: context.record.toJSON(),
-            //         };
-            //     },
-            // },
-        },
         parent: {
             icon: "User",
         },
@@ -46,17 +32,7 @@ export default {
             descricao: {
                 position: 6,
                 isVisible: { list: false, filter: false, show: true, edit: true },
-                type: "richtext",
-                //    quill: {
-                //         module: {
-                //            props: {
-                //   toolbar:[
-                //                 ["bold", "italic"],
-                //                 ["limk", "image"],
-                //             ],
-                //         },
-                //     },
-                // },
+                type: "richtext"
             },                     
         }
     }

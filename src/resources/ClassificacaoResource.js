@@ -7,20 +7,6 @@ import { hasAdminPermission } from "../services/auth";
 export default {
     resource: Classificacao,
     options: {
-        actions: {
-            // list: {
-            //     isAccessible: ({ currentAdmin}) => hasAdminPermission(currentAdmin)
-            //  },
-            // resetPassword: {
-            //     actionType: 'record',
-            //     icon: "Password",
-            //     handler: async(request, response, context) => {
-            //         return {
-            //             record: context.record.toJSON(),
-            //         };
-            //     },
-            // },
-        },
         parent: {
             icon: "Classificacao",
         },

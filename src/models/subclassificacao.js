@@ -8,19 +8,15 @@ class Subclassificacao extends Model {
           name: Sequelize.STRING,          
           id_classificacao: {
             type:  Sequelize.INTEGER,
-            references: { model : "classificacaos", key: "id"}, 
+            references: { model : "classificacao", key: "id"}, 
             allowNull: false,
             }
           }, 
           {
-            sequelize, name: {
-             singular: 'subclassificacao',
-             plural: 'subclassificacaos',
-            },
-          },
-          {
+            sequelize,
+            modelName: 'subclassificacao',
             freezeTableName: true
-          }          
+          },       
     );
   }
 
@@ -28,8 +24,7 @@ class Subclassificacao extends Model {
     this.belongsTo(models.classificacao,  {
       foreignKey: "id_classificacao",
     });    
-    this.hasMany(models.caracterizacao);
-      
+    this.hasMany(models.caracterizacao);      
   }
 }
 

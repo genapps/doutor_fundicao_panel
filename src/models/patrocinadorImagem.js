@@ -1,28 +1,27 @@
 import Sequelize, {Model} from "sequelize";
 
-  class Imagems extends Model {
+  class PatrocinadorImagem extends Model {
   static init(sequelize) {
    super.init(
     
   {
-    
+    name: Sequelize.STRING,
     folder: Sequelize.STRING,
     type: Sequelize.STRING,
     filename: Sequelize.STRING,
     size: Sequelize.INTEGER,
-    id_caracterizacao: {
+    path:Sequelize.STRING,
+    id_patrocionador: {
     type:  Sequelize.INTEGER,
-      references: { model : "caracterizacaos", key: "id"},
+      references: { model : "patrocionador", key: "id"},
       allowNull: false,
      },
   },
   {
     sequelize,
-    name: {
-      singular: "imagem",
-      plural: "imagems",
-    },
-  }
+    modelName: 'patrocinador_imagem',
+    freezeTableName: true
+  },    
    );
     
  }
@@ -36,4 +35,4 @@ import Sequelize, {Model} from "sequelize";
 
 }
 
-export default Imagems;
+export default PatrocinadorImagem;

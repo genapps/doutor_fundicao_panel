@@ -11,33 +11,15 @@ class Patrocinador extends Model {
           
           }, 
           {
-            sequelize, name: {
-             singular: 'patrocinador',
-             plural: 'patrocinadores',
-            },
-          },
-          {
+            sequelize,
+            modelName: 'patrocinador',
             freezeTableName: true
-          }          
+          },            
     );
-
-    this.addHook('beforeSave' , async (user) =>  {
-       if(user.password) {
-          user.password_hash = await createPasswordHash(user.password);
-       }
-       console.log(user.password);
-    }
-    
-    )
   }
 
   static associations(models) {
       
-  }
-
-  checkPassword(password) {
-    console.log('Password ', password);                
-    return checkPassword1(this, password);
   }
 }
 

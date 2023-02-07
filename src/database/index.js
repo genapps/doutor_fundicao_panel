@@ -2,15 +2,15 @@ import  Sequelize from "sequelize";
 
 import config from '../config/database';
 
-import User from "../models/user";
+import Usuario from "../models/usuario";
 import Caracterizacao from "../models/caracterizacao";
 import Classificacao from "../models/classificacao";
 import Patrocinador from "../models/patrocinador";
 import Subclassificacao from "../models/subclassificacao";
-import Imagem from "../models/imagem";
+import CaracterizacaoImagem from "../models/caracterizacaoImagem";
+import PatrocinadorImagem from "../models/patrocinadorImagem"
 
-
-const models = [User, Caracterizacao, Classificacao, Patrocinador, Subclassificacao, Imagem];
+const models = [Usuario, Caracterizacao, Classificacao, Patrocinador, Subclassificacao, CaracterizacaoImagem, PatrocinadorImagem];
 
 class Database {
   constructor() {
