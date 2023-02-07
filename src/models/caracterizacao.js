@@ -31,6 +31,7 @@ class Caracterizacao extends Model {
     this.belongsTo(models.subclassificacao,  {
       foreignKey: "id_subclassificacao",
     });
+    // this.hasMany(models.imagem);    
   }
 }
 

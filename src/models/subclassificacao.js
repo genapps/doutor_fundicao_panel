@@ -1,5 +1,6 @@
 import Sequelize, {Model} from "sequelize";
 
+
 class Subclassificacao extends Model {
   static init (sequelize) {
     super.init(

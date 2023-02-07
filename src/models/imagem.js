@@ -5,25 +5,16 @@ import Sequelize, {Model} from "sequelize";
    super.init(
     
   {
-    // due_date: Sequelize.DATE,
-    // effort: Sequelize.INTEGER,
-    // title: Sequelize.STRING,
-    // description: Sequelize.TEXT,
-    // order: Sequelize.INTEGER,
-    // status: Sequelize.ENUM(
-    //     "backlog",
-    //      "doing",
-    //      "done",
-    //      "approved",
-    //      "rejected" 
-    // ),
-    // user_id: Sequelize.INTEGER,
-    // project_id: Sequelize.INTEGER,
-    path: Sequelize.STRING,
+    
     folder: Sequelize.STRING,
     type: Sequelize.STRING,
     filename: Sequelize.STRING,
     size: Sequelize.INTEGER,
+    id_caracterizacao: {
+    type:  Sequelize.INTEGER,
+      references: { model : "caracterizacaos", key: "id"},
+      allowNull: false,
+     },
   },
   {
     sequelize,
@@ -37,14 +28,10 @@ import Sequelize, {Model} from "sequelize";
  }
 
  static associate(models) {
-  // this.belongsTo(models.User, {
-  //   foreignKey: "user_id",
-  // });
-
-  // this.belongsTo(models.Project, {
-  //   foreignKey: "project_id",
-  // });
-
+  // this.belongsTo(models.caracterizacao,  {
+  //   foreignKey: " id_caracterizacao",
+  // });   
+ 
   }
 
 }
