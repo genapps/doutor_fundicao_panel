@@ -8,7 +8,7 @@ export default {
     resource: Classificacao,
     options: {
         parent: {
-            icon: "Classificacao",
+            icon: "Label",
         },
         properties: {
             id: {

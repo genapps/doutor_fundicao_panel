@@ -24,7 +24,6 @@ export default {
             },
             password: {
                 position: 5,
-                isVisible: false,
                 isVisible: { list: false, filter:false, show: false, edit: true},
             },
             role: {
@@ -44,14 +43,14 @@ export default {
                     {value: 'archived' , label: 'Arquivado'}
                 ],
             },
-            createAt:{
-                position: 8,
-                isVisible: { list: true, filter: true, show: true, edit: false}
+            initials: {
+                isVisible: false
             },
-            updateAt:{
-                position: 9,
-                isVisible: { list: true, filter: true, show: true, edit: false}
-            }           
+
+            password_hash: {
+                isVisible: false
+            },  
+
         }
     }
 }

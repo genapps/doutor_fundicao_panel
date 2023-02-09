@@ -8,7 +8,7 @@ export default {
     resource: Caracterizacao,
     options: {
         parent: {
-            icon: "User",
+            icon: "Label",
         },
         properties: {
             id: {

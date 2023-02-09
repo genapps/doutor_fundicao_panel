@@ -8,7 +8,7 @@ export default {
     resource: Patrocinador,
     options: {
         parent: {
-            icon: "Patrocinador",
+            icon: "Label",
         },
         properties: {
             id: {

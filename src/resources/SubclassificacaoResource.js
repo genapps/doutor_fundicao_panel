@@ -8,7 +8,7 @@ export default {
     resource: Subclassificacao,
     options: {
         parent: {
-            icon: "User",
+            icon: "Label",
         },
         properties: {
             id: {

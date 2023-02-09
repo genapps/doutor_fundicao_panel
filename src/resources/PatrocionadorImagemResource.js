@@ -8,7 +8,7 @@ export default {
     resource: PatrocionadorImagem,
     options: {
         parent:{
-            icon: "ImagemPatrocionador",
+            icon: "Image",
         },
 
         properties: {

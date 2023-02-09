@@ -7,7 +7,7 @@ export default {
     resource: CaracterizacaoImagem,
     options: {
         parent:{
-            icon: "Imagem",
+            icon: "Image",
         },
 
         properties: {
