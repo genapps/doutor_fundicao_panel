@@ -50,6 +50,6 @@ const router = AdminJExpress.buildRouter(adminJS);
 // });
 
 app.use(adminJS.options.rootPath,router);
-app.listen(5000, () => {
-    console.log("AdminJS is unp:der htt//localhost:5000/admin");
+app.listen(3000, () => {
+    console.log("AdminJS is unp:der htt//localhost:3000/admin");
 });
